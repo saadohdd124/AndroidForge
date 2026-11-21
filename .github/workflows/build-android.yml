@@ -320,7 +320,7 @@ jobs:
             echo "/opt/gradle-${GRADLE_VER}/bin" >> "$GITHUB_PATH"
             export PATH="/opt/gradle-${GRADLE_VER}/bin:$PATH"
             which gradle
-gradle --version
+            gradle --version
             /opt/gradle-${GRADLE_VER}/bin/gradle --version
           else
             gradle --version
