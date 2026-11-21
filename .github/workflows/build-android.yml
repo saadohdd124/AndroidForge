@@ -318,7 +318,7 @@ jobs:
             wget -q "https://services.gradle.org/distributions/gradle-${GRADLE_VER}-bin.zip" -O /tmp/gradle.zip
             unzip -q /tmp/gradle.zip -d /opt
             echo "/opt/gradle-${GRADLE_VER}/bin" >> "$GITHUB_PATH"
-            export PATH="/opt/gradle-${GRADLE_VER}/bin:$PATH"
+                        export PATH="/opt/gradle-${GRADLE_VER}/bin:$PATH"
             which gradle
             gradle --version
             /opt/gradle-${GRADLE_VER}/bin/gradle --version
