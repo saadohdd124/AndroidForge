@@ -45,6 +45,7 @@ agp_to_gradle:
 # Mapping: AGP version -> required JDK version
 # AGP 8.x requires JDK 17. AGP 7.x works with JDK 11. Older AGPs work with JDK 8.
 agp_to_jdk:
+  "9.x": "17"
   "8.x": "17"
   "7.x": "11"
   "4.x": "11"
@@ -54,6 +55,7 @@ agp_to_jdk:
 # Mapping: Gradle version -> required JDK version (Gradle's own requirement).
 # Reference: https://docs.gradle.org/current/userguide/compatibility.html
 gradle_to_jdk:
+  "9.x": "17"
   "8.x": "17"
   "7.x": "11"
   "6.x": "8"
