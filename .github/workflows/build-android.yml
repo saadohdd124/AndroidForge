@@ -316,10 +316,13 @@ jobs:
             # For newer Gradle requirements (8.7, 8.10), the image's 8.9 satisfies them.
             REQ_MAJOR=$(echo "$GRADLE_VER" | cut -d. -f1)
             if [ "$REQ_MAJOR" -lt 8 ]; then
-              echo "Project wants older Gradle $GRADLE_VER — downloading..."
-              wget -q "https://services.gradle.org/distributions/gradle-${GRADLE_VER}-bin.zip" -O /tmp/gradle.zip
-              unzip -q /tmp/gradle.zip -d /opt
-              echo "/opt/gradle-${GRADLE_VER}/bin" >> "$GITHUB_PATH"
+              echo "Downloading required Gradle $GRADLE_VER..."
+
+wget -q "https://services.gradle.org/distributions/gradle-${GRADLE_VER}-bin.zip" -O /tmp/gradle.zip
+
+unzip -q /tmp/gradle.zip -d /opt
+
+echo "/opt/gradle-${GRADLE_VER}/bin" >> "$GITHUB_PATH"
             else
               echo "✓ Image's Gradle 8.9 satisfies the project's requirement of $GRADLE_VER+"
             fi
